@@ -2,9 +2,11 @@ import styled, { ThemeProvider } from "styled-components";
 import {darkTheme, darktheme} from "./utils/Themes";
 import Navbar from "./component/Navbar";
 import { BrowserRouter, Router } from "react-router-dom";
+import Hero from "./component/sections/Hero";
 
 const Body = styled.div`
   background-color: ${({theme}) => theme.bg};
+  color: ${({theme}) => theme.text_primary};
   width: 100%;
   height: 90vh;
   overflow-x: hidden;
@@ -16,7 +18,9 @@ function App() {
     <ThemeProvider theme={darkTheme}> 
       <BrowserRouter>
         <Navbar />
-        <Body />
+        <Body>
+          <Hero />
+        </Body>
       </BrowserRouter>
     </ThemeProvider>
   );
