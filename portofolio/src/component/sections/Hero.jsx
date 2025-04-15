@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { Bio } from '../../data/constants';
 import Typewriter from 'typewriter-effect';
 import HeroImg from '../../images/HeroImg.jpg';
-import HeroBgAnimation from '../../HeroBgAnimation'
+import HeroBgAnimation from '../../HeroBgAnimation';
+import {Tilt} from 'react-tilt';
+import {motion} from 'framer-motion';
+import { headContainerAnimation, headTextAnimation, headContentAnimation } from '../../utils/motion';
 
 const HeroContainer = styled.div`
     display: flex;
@@ -137,6 +140,7 @@ const ResumeButton = styled.a`
     text-align: center;
     padding: 16px 0;
 
+
     background: hsla(271, 100%, 50%, 1);
     background: linear-gradient(
         225deg,
@@ -156,7 +160,7 @@ const ResumeButton = styled.a`
     box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
 
     &:hover {
         transform: scale(1.05);
@@ -213,30 +217,42 @@ const Hero = () => {
         <HeroBg>
             <HeroBgAnimation />
         </HeroBg>
-        <HeroInnerContainer>
-            <HeroLeftContainer>
-                <Title>
-                    Hi, I am <br /> {Bio.name}
-                </Title>
-                <TextLoop>
-                    I am a
-                    <Span>
-                        <Typewriter
-                         options={{
-                            strings: Bio.roles,
-                            autoStart: true,
-                            loop: true,
-                         }}
-                        />
-                    </Span>
-                </TextLoop>
-                <SubTitle>{Bio.description}</SubTitle>
-                <ResumeButton>Check Resume</ResumeButton>
-            </HeroLeftContainer>
-            <HeroRightContainer>
-                <Img src={HeroImg} alt="Muhammad Ridhwan Khalid" />
-            </HeroRightContainer>
-        </HeroInnerContainer>
+        <motion.div {...headContainerAnimation}>
+            <HeroInnerContainer>
+                <HeroLeftContainer>
+                    <motion.div {...headTextAnimation}>
+                        <Title>
+                            Hi, I am <br /> {Bio.name}
+                        </Title>
+                        <TextLoop>
+                            I am a
+                            <Span>
+                                <Typewriter
+                                 options={{
+                                    strings: Bio.roles,
+                                    autoStart: true,
+                                    loop: true,
+                                 }}
+                                />
+                            </Span>
+                        </TextLoop>
+                    </motion.div>
+
+                    <motion.div {...headContentAnimation}>
+                        <SubTitle>{Bio.description}</SubTitle>
+                    </motion.div>
+                    
+                    <ResumeButton>Check Resume</ResumeButton>
+                </HeroLeftContainer>
+                <HeroRightContainer>
+                    <motion.div {...headContentAnimation}>
+                        <Tilt>
+                            <Img src={HeroImg} alt="Muhammad Ridhwan Khalid" />
+                        </Tilt>
+                    </motion.div>
+                </HeroRightContainer>
+            </HeroInnerContainer>
+        </motion.div>
       </HeroContainer>
     </div>
   )
