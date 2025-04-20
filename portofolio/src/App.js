@@ -7,12 +7,12 @@ import Skills from "./component/sections/Skills";
 import Experience from "./component/sections/Experience";
 import Education from "./component/sections/Education";
 import Projects from "./component/sections/Projects";
+import Contact from "./component/sections/Contact";
+import Footer from "./component/sections/Footer";
 
 const Body = styled.div`
-  background-color: ${({theme}) => theme.bg};
-  color: ${({theme}) => theme.text_primary};
+  background-color: ${({ theme }) => theme.bg};
   width: 100%;
-  height: 90vh;
   overflow-x: hidden;
   position: relative;
 `;
@@ -47,7 +47,9 @@ function App() {
           <Projects />
           <Wrapper>
             <Education />
+            <Contact />
           </Wrapper>
+          <Footer />
         </Body>
       </BrowserRouter>
     </ThemeProvider>

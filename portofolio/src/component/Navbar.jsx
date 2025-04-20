@@ -81,7 +81,7 @@ const MenuButtonContainer = styled.div`
     align-items: start;
 `;
 
-const GithubButton = styled.div`
+const GithubButton = styled.a`
     border: 1px solid ${({theme}) => theme.primary};
     color: ${({theme}) => theme.primary};
     justify-content: center;
@@ -100,7 +100,7 @@ const GithubButton = styled.div`
     }
 `;
 
-const LinkedinButton = styled.div`
+const LinkedinButton = styled.a`
     border: 1px solid ${({theme}) => theme.linkedin};
     color: ${({theme}) => theme.linkedin};
     justify-content: center;
@@ -171,7 +171,6 @@ const Navbar = () => {
             <NavItems>
                 <NavLink href="#About">About</NavLink>
                 <NavLink href="#Skills">Skills</NavLink>
-                <NavLink href="#Experience">Experience</NavLink>
                 <NavLink href="#Projects">Projects</NavLink>
                 <NavLink href="#Education">Education</NavLink>
             </NavItems>
@@ -180,7 +179,6 @@ const Navbar = () => {
                 <MobileMenu isOpen={isOpen}>
                     <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">About</NavLink>
                     <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">Skills</NavLink>
-                    <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">Experience</NavLink>
                     <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">Projects</NavLink>
                     <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">Education</NavLink>
                     <MenuButtonContainer>

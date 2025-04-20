@@ -19,15 +19,16 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     max-width: 1100px;
     gap: 12px;
     @media (max-width: 960px) {
-        flex-direction: column;
+      flex-direction: column;
     }
 `;
 
-const Tittle = styled.div`
+const Title = styled.div`
     font-size: 52px;
     text-align: center;
     font-weight: 600;
@@ -92,36 +93,54 @@ const CardContainer = styled.div`
 `;
 
 const Projects = () => {
-    const [toggle, setToggle] = useState("all");
+  const [toggle, setToggle] = useState("all");
   return (
     <Container id="Projects">
-      <Tittle>Projects</Tittle>
-      <Desc 
-          style={{
-            marginBottom: "40px",
-          }}
-            > I have worked on a wide range of projects. Here are some of my projects.
-        </Desc>
+        <Wrapper>
+            <Title>Projects</Title>
+            <Desc 
+              style={{
+                marginBottom: "40px",
+              }}
+                > I have worked on a wide range of projects. Here are some of my projects.
+            </Desc>
 
-        <ToggleButtonGroup>
-            <ToggleButton active={toggle === "all"}>ALL</ToggleButton>
-            <Divider />
-            <ToggleButton active={toggle === "web app"} onclick={() => setToggle("web app")}>Web App</ToggleButton>
-            <Divider />
-            <ToggleButton active={toggle === "android app"} onclick={() => setToggle("android app")}>Android App</ToggleButton>
-        </ToggleButtonGroup>
-        
-        <CardContainer>
-            {toggle === "all" &&
-                projects.map((project) => <ProjectCard project={project} />)}
-            {projects
-                .filter((item) => item.category === toggle)
-                .map((project) => (
+            <ToggleButtonGroup>
+                <ToggleButton 
+                  active={toggle === "all"}
+                  onClick={() => setToggle("all")}
+                  >
+                    ALL
+                </ToggleButton>
+                <Divider />
+                <ToggleButton 
+                  active={toggle === "web app"} 
+                  onClick={() => setToggle("web app")}
+                  >
+                    Web App
+                </ToggleButton>
+                <Divider />
+                <ToggleButton 
+                  active={toggle === "android app"} 
+                  onClick={() => setToggle("android app")}
+                  >
+                    Android App
+                </ToggleButton>
+            </ToggleButtonGroup>
+          
+            <CardContainer>
+                {toggle === "all" &&
+                    projects.map((project) => <ProjectCard project={project} />
+                )}
+                {projects 
+                  .filter((item) => item.category === toggle)
+                  .map((project) => (
                     <ProjectCard project={project} />
-            ))}
-        </CardContainer>
+                ))}
+            </CardContainer>
+        </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
 export default Projects

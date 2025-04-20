@@ -20,7 +20,7 @@ const Card = styled.div`
     filter: brightness(1.1);
   }
 `;
-const Image = styled.div`
+const Image = styled.img`
   width: 100%;
   height: 180px;
   background-color: ${({ theme }) => theme.white};
@@ -75,7 +75,7 @@ const Button = styled.div`
 const ProjectCard = ({project}) => {
   return (
     <Card>
-        <Image src={project.img}/>
+        <Image src={project.image}/>
         <Tags></Tags>
         <Details>
             <Title>{project.title}</Title>
