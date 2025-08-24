@@ -162,7 +162,7 @@ const Navbar = () => {
   return (
     <Nav>
         <NavbarContainer>
-            <NavLogo to="/">MRK's Portofolio</NavLogo>
+            <NavLogo to="/">MRK's Portfolio</NavLogo>
 
             <MobileIcon onClick={() => setIsOpen(!isOpen)}>
                 <MenuRounded style={{ color: "inherit"}} />
