@@ -1,5 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import ButtonGroup from "@mui/material/ButtonGroup";
 
 const Card = styled.div`
   width: 330px;
@@ -65,25 +67,42 @@ const Description = styled.div`
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 `;
-const Button = styled.div`
+const GithubButton = styled.a`
+  border: 1px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
+  border-radius: 15px;
   text-decoration: none;
   font-weight: 600;
   text-align: center;
 `;
 
-const ProjectCard = ({project}) => {
+const WebButton = styled.a`
+  border: 1px solid ${({ theme }) => theme.web};
+  color: ${({ theme }) => theme.web};
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+`;
+
+const ProjectCard = ({ project }) => {
+  const navigate = useNavigate();
   return (
     <Card>
-        <Image src={project.image}/>
-        <Tags></Tags>
-        <Details>
-            <Title>{project.title}</Title>
-            <Description>{project.description}</Description>
-        </Details>
-        <Button href={project.github} target="_blank">View Code</Button>
+      <Image src={project.image} />
+      <Tags></Tags>
+      <Details>
+        <Title>{project.title}</Title>
+        <Description>{project.description}</Description>
+      </Details>
+      <GithubButton href={project.github} target="_blank" rel="noreferrer">
+        View Code
+      </GithubButton>
+      <WebButton href={project.webapp} target="_blank" rel="noreferrer">
+        View Web
+      </WebButton>
     </Card>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

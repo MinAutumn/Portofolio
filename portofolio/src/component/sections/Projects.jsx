@@ -105,7 +105,7 @@ const Projects = () => {
                 > I have worked on a wide range of projects. Here are some of my projects.
             </Desc>
 
-            <ToggleButtonGroup>
+            {/* <ToggleButtonGroup>
                 <ToggleButton 
                   active={toggle === "all"}
                   onClick={() => setToggle("all")}
@@ -126,7 +126,7 @@ const Projects = () => {
                   >
                     Android App
                 </ToggleButton>
-            </ToggleButtonGroup>
+            </ToggleButtonGroup> */}
           
             <CardContainer>
                 {toggle === "all" &&

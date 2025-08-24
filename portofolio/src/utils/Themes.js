@@ -9,7 +9,8 @@ export const darkTheme = {
   button: "#854CE6",
   white: "#FFFFFF",
   black: "#000000",
-  linkedin: "#0077B5"
+  linkedin: "#0077B5",
+  web: "#2274A5",
 };
 
 export const lightTheme = {
@@ -20,4 +21,5 @@ export const lightTheme = {
   text_secondary: "#48494a",
   card: "#FFFFFF",
   button: "#5c5b5b",
+  linkedin: "#0077B5",
 };
