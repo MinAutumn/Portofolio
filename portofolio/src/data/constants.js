@@ -4,6 +4,7 @@ import ResumaiImg from "../images/ResumAi.png";
 import ExpenseTrackerImg from "../images/expensetracker.png";
 import MovieImg from "../images/movie.png";
 import TravelAdvisorImg from "../images/traveladvisor.png";
+import storeit from "../images/storeit.png"
 
 export const Bio = {
   name: "Muhammad Ridhwan Khalid",
@@ -299,7 +300,7 @@ export const projects = [
     description:
       "A google drive clone that allow users to share file between users.",
     image:
-      TravelAdvisorImg,
+      storeit,
     tags: ["React", "Next.Js","Tailwind","Appwrite","Typescript","ShadCN"],
     category: "web app",
     github: "https://github.com/MinAutumn/storem-mrk",
