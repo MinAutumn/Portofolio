@@ -18,7 +18,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/MinAutumn",
   resume:
-    "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view?usp=drive_link",
+    "https://docs.google.com/document/d/1Jkaj0BqMVawPl__W32FZWOKcKWI3sBa4/edit?usp=drive_link&ouid=104914466302021530339&rtpof=true&sd=true",
   linkedin: "https://www.linkedin.com/in/muhammad-ridhwan-khalid1304/"
 };
 

@@ -222,7 +222,7 @@ const Hero = () => {
                 <HeroLeftContainer>
                     <motion.div {...headTextAnimation}>
                         <Title>
-                            Hi, I am <br /> {Bio.name}
+                            Hi, my name is <br /> {Bio.name}
                         </Title>
                         <TextLoop>
                             I am a
@@ -242,7 +242,7 @@ const Hero = () => {
                         <SubTitle>{Bio.description}</SubTitle>
                     </motion.div>
                     
-                    <ResumeButton>Check Resume</ResumeButton>
+                    <ResumeButton href={Bio.resume} target='_blank'>Check Resume</ResumeButton>
                 </HeroLeftContainer>
                 <HeroRightContainer>
                     <motion.div {...headContentAnimation}>
