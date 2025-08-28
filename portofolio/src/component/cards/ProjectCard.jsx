@@ -86,7 +86,6 @@ const WebButton = styled.a`
 `;
 
 const ProjectCard = ({ project }) => {
-  const navigate = useNavigate();
   return (
     <Card>
       <Image src={project.image} />
