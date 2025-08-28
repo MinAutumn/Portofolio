@@ -280,7 +280,7 @@ export const projects = [
     webapp: "https://movie-mrk.netlify.app/",
   },
   {
-    id: 2,
+    id: 4,
     title: "Travel Advisor",
     date: "Sep 2024",
     description:
@@ -291,6 +291,19 @@ export const projects = [
     category: "web app",
     github: "https://github.com/MinAutumn/travel_advisor",
     webapp: "https://travel-advisor-mrk.netlify.app/",
+  },
+  {
+    id: 5,
+    title: "StoreIt",
+    date: "Aug 2025",
+    description:
+      "A google drive clone that allow users to share file between users.",
+    image:
+      TravelAdvisorImg,
+    tags: ["React", "Next.Js","Tailwind","Appwrite","Typescript","ShadCN"],
+    category: "web app",
+    github: "https://github.com/MinAutumn/storem-mrk",
+    webapp: "https://storeit-mrk.netlify.app/",
   },
 ];
 
